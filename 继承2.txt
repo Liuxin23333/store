@@ -1,0 +1,35 @@
+'''
+ i.	人：年龄，性别，姓名。
+
+ ii.	现在有个工种，工人：年龄，性别，姓名 。行为：干活。请用继承的角度来实现该类。
+
+ iii.	现在有学生这个工种，学生：年龄，性别，姓名，学号。行为：学习，唱歌。请结合上面的几个题目用继承的角度来实现。
+'''
+
+class person:
+    age=''
+    sex=''
+    name=''
+
+class worker(person):
+     work_type=''
+     def working(self):
+         print('正在干活')
+
+class student(worker):
+    number=''
+     def learn(self):
+         print('正在学习')
+     def sing(self):
+         print('正常唱歌')
+
+a=student()
+a.age='10'
+a.sex='男'
+a.name='xiao'
+a.work_type='工人'
+a.number='10055'
+a.working()
+a.learn()
+a.sing()
+print(a.sex,a.work_type,a.name,a.number)
